@@ -1,0 +1,32 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" controllerName="com.sap.fullscreen.view.S1">
+
+	<Page id="page">
+		<content>
+			<Panel headerText="Panel" class="sapUiResponsiveMargin" width="auto">
+				<content>
+					<List id="ProductList" headerText="List"
+						items="{
+				path: '/jsonSet',
+				factory: '.productListFactory'
+			}" />
+				</content>
+			</Panel>
+			<Panel headerText="Panel2" class="sapUiResponsiveMargin" width="auto">
+				<content>
+					<f:SimpleForm  minWidth="1024"
+						maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
+						title="Address" labelSpanL="3" labelSpanM="3" emptySpanL="4"
+						emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+						<f:content>
+							<l:VerticalLayout id="SimpleFormChange354"
+								content="{ path: 'panel2alias>/jsonset2', factory: '.createContent'}"
+								class="sapUiContentPadding"  />
+							
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+		</content>
+	</Page>
+</core:View>
